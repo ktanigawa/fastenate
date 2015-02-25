@@ -38,6 +38,7 @@ h1{
     float: right;
     border: solid 2px $orange;
     margin: 10px 10px;
+    text-align: center;
     &:hover{
       background-color: $orange;
     }
@@ -58,14 +59,15 @@ h1{
   }
 }
 
-.main_nav{
+ul.main_nav{
   background-color: $darkgrey;
   @media #{$small-only}{
     width: 100%; 
   }
 }
 
-.main_nav li{
+
+ul.main_nav li{
     display: inline-block;
   @media #{$small-only}{
     width: 33%;
@@ -73,14 +75,13 @@ h1{
   }
 }
 
-.main_nav li a{
-  @include article_title($oswald_font, 16px, $grey, 400);
-  text-transform: uppercase;
-  text-decoration: none;
-  display: block;
-  margin: auto;
-
+ul.main_nav li a{
   @media #{$small-only}{
+    @include article_title($oswald_font, 16px, $grey, 400);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    text-align: center;
     height: 45px;
     line-height: 45px;
     background-color: $darkgrey;
@@ -131,23 +132,29 @@ h1{
     background-size: cover;
     height: 250px;
   }
-  @media #{$medium-up}{
+  @media #{$medium-only}{
     background-image: url("http://placekitten.com/g/410/250");
     background-size: cover;
-    height: 170px;
+    height: 165px;
+    width: 275px;
   }
 }
 
 .content_container .title{
-  @include article_title($oswald_font, 22px, $darkgrey, 400);
   line-height: 30px;
   padding-top: 10px;
-  text-align: left;
   letter-spacing: .5px;
+  @media #{$small-only}{
+    @include article_title($oswald_font, 22px, $darkgrey, 400);
+  }
+  @media #{$medium-only}{
+    @include article_title($oswald_font, 18px, $darkgrey, 400);
+  }
 }
 
 .content_container .info ul li{
   @include article_title($lato_font, 14px, $grey, 400);
+  // ::before &bull;
   display: inline-block;
   padding-top: 5px;
 }
@@ -161,9 +168,11 @@ h1{
 }
 
 footer{
-  background-color: $darkgrey;
-  height: 50px;
-  margin-top: 40px;
+  @media #{$medium-up}{
+    background-color: $darkgrey;
+    height: 50px;
+    margin-top: 40px;
+  } 
 }
 
 footer .facebook{
@@ -177,15 +186,15 @@ footer .facebook{
   }
 }
 
-footer .instaspam{
-  @media #{$medium-up}{
-    background-image: url('/assets/instagram_grey.svg');
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    padding-left: 10px;
-  }  
-}
+// footer .instaspam{
+//   @media #{$medium-up}{
+//     background-image: url('/assets/instagram_grey.svg');
+//     background-repeat: no-repeat;
+//     width: 20px;
+//     height: 20px;
+//     margin: auto;
+//     padding-left: 10px;
+//   }  
+// }
 
 

@@ -79,7 +79,7 @@ h1 {
 @media only screen and (max-width:640px) {
   .plus {
     font-family: "Lato", Helvetica, Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
     color: #BE3E2B;
     font-weight: 400;
@@ -87,13 +87,14 @@ h1 {
     width: 30px;
     float: right;
     border: solid 2px #FC7E5A;
-    margin: 10px 10px; }
+    margin: 10px 10px;
+    text-align: center; }
     .plus:hover {
       background-color: #FC7E5A; } }
 @media only screen and (min-width:641px) and (max-width:960px) {
   .plus {
     font-family: "Lato", Helvetica, Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
     color: #BE3E2B;
     font-weight: 400;
@@ -107,35 +108,34 @@ h1 {
     .plus:hover {
       background-color: #FC7E5A; } }
 
-.main_nav {
+ul.main_nav {
   background-color: #3A3A3C; }
   @media only screen and (max-width:640px) {
-    .main_nav {
+    ul.main_nav {
       width: 100%; } }
 
-.main_nav li {
+ul.main_nav li {
   display: inline-block; }
   @media only screen and (max-width:640px) {
-    .main_nav li {
+    ul.main_nav li {
       width: 33%;
       box-sizing: border-box; } }
 
-.main_nav li a {
-  font-family: "Oswald", Helvetica, Arial, sans-serif;
-  text-align: center;
-  font-size: 16px;
-  color: #818285;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: block;
-  margin: auto; }
-  @media only screen and (max-width:640px) {
-    .main_nav li a {
-      height: 45px;
-      line-height: 45px;
-      background-color: #3A3A3C;
-      border-right: solid 1px #818285; } }
+@media only screen and (max-width:640px) {
+  ul.main_nav li a {
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+    text-align: left;
+    font-size: 16px;
+    color: #818285;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    background-color: #3A3A3C;
+    border-right: solid 1px #818285; } }
 
 .container {
   max-width: 1000px;
@@ -169,26 +169,35 @@ h1 {
     background-image: url("http://placekitten.com/g/410/250");
     background-size: cover;
     height: 250px; } }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:641px) and (max-width:960px) {
   .content_container .pug_image {
     background-image: url("http://placekitten.com/g/410/250");
     background-size: cover;
-    height: 170px; } }
+    height: 165px;
+    width: 275px; } }
 
 .content_container .title {
-  font-family: "Oswald", Helvetica, Arial, sans-serif;
-  text-align: center;
-  font-size: 22px;
-  color: #3A3A3C;
-  font-weight: 400;
   line-height: 30px;
   padding-top: 10px;
-  text-align: left;
   letter-spacing: .5px; }
+  @media only screen and (max-width:640px) {
+    .content_container .title {
+      font-family: "Oswald", Helvetica, Arial, sans-serif;
+      text-align: left;
+      font-size: 22px;
+      color: #3A3A3C;
+      font-weight: 400; } }
+  @media only screen and (min-width:641px) and (max-width:960px) {
+    .content_container .title {
+      font-family: "Oswald", Helvetica, Arial, sans-serif;
+      text-align: left;
+      font-size: 18px;
+      color: #3A3A3C;
+      font-weight: 400; } }
 
 .content_container .info ul li {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  text-align: center;
+  text-align: left;
   font-size: 14px;
   color: #818285;
   font-weight: 400;
@@ -197,7 +206,7 @@ h1 {
 
 .content_container p {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  text-align: center;
+  text-align: left;
   font-size: 15px;
   color: #3A3A3C;
   font-weight: 400;
@@ -206,10 +215,11 @@ h1 {
   letter-spacing: .5px;
   padding-top: 10px; }
 
-footer {
-  background-color: #3A3A3C;
-  height: 50px;
-  margin-top: 40px; }
+@media only screen and (min-width:641px) {
+  footer {
+    background-color: #3A3A3C;
+    height: 50px;
+    margin-top: 40px; } }
 
 @media only screen and (min-width:641px) {
   footer .facebook {
@@ -219,12 +229,3 @@ footer {
     height: 20px;
     margin: auto;
     padding-right: 10px; } }
-
-@media only screen and (min-width:641px) {
-  footer .instaspam {
-    background-image: url('/assets/instagram_grey.svg');
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    padding-left: 10px; } }

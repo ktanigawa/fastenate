@@ -1,3 +1,8 @@
+timestamp: floating big number milliseconds: convert it to a date: compare that date against today:
+USING moment.js
+views 
+scores: number
+
 # Fastenate
 
 ## Set-up

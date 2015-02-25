@@ -1,6 +1,6 @@
 @mixin article_title($font-family:$lato_font, $font-size: $base, $font-color:$black, $font_weight:400){
   font-family: $font-family;
-  text-align: center;
+  text-align: left;
   font-size: $font-size;
   color: $font-color;
   font-weight: $font_weight;
