@@ -174,8 +174,8 @@ ul.main_nav li a:hover{
 
 .content_container .content_image{
     background-image: url("http://placekitten.com/g/410/250");
+    background-size: cover;
   @media #{$small-only}{
-    // background-size: cover;
     height: 250px;
   }
   @media #{$medium-up}{
