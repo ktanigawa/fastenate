@@ -1,10 +1,18 @@
+$base: 16px;
 //fonts
 $lato_font: "Lato", Helvetica, Arial, sans-serif;
 $oswald_font: "Oswald", Helvetica, Arial, sans-serif;
 
 //colors
+$white: #FFF;
 $black: #000;
 $grey: #818285;
 $darkgrey: #3A3A3C;
 $red: #BE3E2B;
 $orange: #FC7E5A;
+
+//media queries
+$small-only: "only screen and (max-width:640px)";
+$medium-only: "only screen and (min-width:641px) and (max-width:960px)";
+$medium-up: "only screen and (min-width:641px)";
+$large-only: "only screen and (min-width:961px)";

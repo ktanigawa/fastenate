@@ -1,22 +1,191 @@
 @import "http://fonts.googleapis.com/css?family=Lato|Oswald:400.css";
 @import "partials/mixins";
 @import "partials/settings";
-// @include article_title($oswald_font, 1em, $black, 400);
-// @include article_title($lato_font, 1em, $black, 400);
+@import "partials/reset";
+
 body {
-}
-h1 {
-  background-color: #fff;
-}
-
-.pug_image{
-
+  background-image: url('/assets/bg.jpg');
+  @media #{$small-only}{    
+    background-color: $red;
+  }
 }
 
-.title{
+.logo_container{
+  background-color: $white;
+}
+
+h1{
+  background-image: url('/assets/logo.svg');
+  background-repeat: no-repeat;
+  @media #{$small-only}{
+    float: left;
+    width: 80%;
+    height: 64px;
+    background-size: contains;
+    margin: auto;
+  }
+  @media #{$medium-only}{
+    height: 64px;
+    margin: auto;
+  }
+}
+
+.plus{
+  @media #{$small-only}{
+    @include article_title($lato_font, 30px, $red, 400);
+    height: 30px;
+    width: 30px;
+    float: right;
+    border: solid 2px $orange;
+    margin: 10px 10px;
+    &:hover{
+      background-color: $orange;
+    }
+  }
+
+  @media #{$medium-only}{
+    @include article_title($lato_font, 30px, $red, 400);
+    height: 30px;
+    width: 30px;
+    border: solid 2px $orange;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: block;
+    &:hover{
+      background-color: $orange;
+    }
+  }
+}
+
+.main_nav{
+  background-color: $darkgrey;
+  @media #{$small-only}{
+    width: 100%; 
+  }
+}
+
+.main_nav li{
+    display: inline-block;
+  @media #{$small-only}{
+    width: 33%;
+    box-sizing: border-box;
+  }
+}
+
+.main_nav li a{
+  @include article_title($oswald_font, 16px, $grey, 400);
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+
+  @media #{$small-only}{
+    height: 45px;
+    line-height: 45px;
+    background-color: $darkgrey;
+    // background-color: blue;
+    border-right: solid 1px $grey;
+  }
 
 }
 
-.info{
-  
+.container{
+  max-width: 1000px;
+  padding-top: 45px;
+  margin: auto;
+  // display: inline;
 }
+
+.content_container{
+  background-color: $white;
+  margin: 10px;
+  padding: 20px;
+  @media #{$small-only}{
+    // width: 95%;
+    margin: 10px;
+    padding: 20px;
+  }
+  @media #{$medium-up}{
+    float: left;    
+    // width: 48%;
+    width: 325px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 400px;
+    // margin: 0px;
+    // padding: 10px;
+    background-color: $white;
+    &:nth-child(even){
+      float: left;
+      width: 325px;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.content_container .pug_image{
+  @media #{$small-only}{
+    background-image: url("http://placekitten.com/g/410/250");
+    background-size: cover;
+    height: 250px;
+  }
+  @media #{$medium-up}{
+    background-image: url("http://placekitten.com/g/410/250");
+    background-size: cover;
+    height: 170px;
+  }
+}
+
+.content_container .title{
+  @include article_title($oswald_font, 22px, $darkgrey, 400);
+  line-height: 30px;
+  padding-top: 10px;
+  text-align: left;
+  letter-spacing: .5px;
+}
+
+.content_container .info ul li{
+  @include article_title($lato_font, 14px, $grey, 400);
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.content_container p{
+  @include article_title($lato_font, 15px, $darkgrey, 400);
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: .5px;
+  padding-top: 10px;
+}
+
+footer{
+  background-color: $darkgrey;
+  height: 50px;
+  margin-top: 40px;
+}
+
+footer .facebook{
+  @media #{$medium-up}{
+    background-image: url('/assets/facebook_grey.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    padding-right: 10px;
+  }
+}
+
+footer .instaspam{
+  @media #{$medium-up}{
+    background-image: url('/assets/instagram_grey.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    padding-left: 10px;
+  }  
+}
+
+
