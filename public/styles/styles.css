@@ -1,2 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Oswald:400.css);
 body h1 {
-  background-color: #fff; }
+  background-color: #fff;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 1em;
+  color: #000;
+  font-weight: 400; }
+body h2 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 1em;
+  color: #000;
+  font-weight: 400; }

@@ -1,5 +1,13 @@
+@import "http://fonts.googleapis.com/css?family=Lato|Oswald:400.css";
+@import "partials/mixins";
+@import "partials/settings";
+
 body {
   h1 {
     background-color: #fff;
+    @include article_title($oswald_font, 1em, $black, 400);
+  }
+  h2{
+    @include article_title($lato_font, 1em, $black, 400);
   }
 }
