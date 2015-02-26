@@ -5,13 +5,16 @@ var connect = require('gulp-connect');
 var PathTo = {
   SassFiles: './sass/**/*.scss',
   PublicFolder: './public',
+  PublicHtml: './public/index.html',
   PublicCss: './public/styles',
-  PublicCssFiles: './public/styles/*.css'
+  PublicCssFiles: './public/styles/*.css',
+  PublicJsFiles: './public/js/app.js'
 };
 
 gulp.task('watch-files', function (){
   gulp.watch(PathTo.SassFiles, ['compile-sass']);
-  // gulp.watch(PathTo.PublicCssFiles);
+  gulp.watch(PathTo.PublicCssFiles, ['html']);
+  gulp.watch(PathTo.PublicJsFiles, ['html']);
 });
 
 gulp.task('compile-sass', function (){
