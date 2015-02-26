@@ -12,6 +12,11 @@ body {
 
 .logo_container{
   background-color: $white;
+  @media #{$medium-up}{
+    background-image: url('/assets/header_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
 }
 
 h1{
@@ -24,9 +29,9 @@ h1{
     background-size: contains;
     margin: auto;
   }
-  @media #{$medium-only}{
+  @media #{$medium-up}{
     height: 64px;
-    margin: auto;
+    background-position: center;
   }
 }
 
@@ -43,7 +48,7 @@ h1{
       background-color: $orange;
     }
   }
-  @media #{$medium-only}{
+  @media #{$medium-up}{
     @include article_title($lato_font, 30px, $red, 400);
     text-align: center;
     height: 30px;
@@ -63,7 +68,7 @@ ul.main_nav{
   background-color: $darkgrey;
   width: 100%; 
   @media #{$medium-up}{
-    @include article_title($oswald_font, 16px, $grey, 400);
+    @include article_title($oswald_font, 9px, $grey, 400);
     width: 100%;
     text-align: center;
     margin:0;
@@ -80,12 +85,26 @@ ul.main_nav li{
     box-sizing: border-box;
   }
   @media #{$medium-up}{
-    background-color: blue;
     margin-top: 15px;
   }
 }
 
 //bullets
+ul.authored li:before{
+  @media #{$medium-up}{
+    content: " ";
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background-color: $grey;
+    border-radius: 100%;
+    position: relative;
+    top: -4px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
+
 ul.main_nav li:before{
   @media #{$medium-up}{
     content: " ";
@@ -133,9 +152,8 @@ ul.main_nav li a:hover{
 
 //CENTERED div size
 .container{
-  background-color: blue;
+  // background-color: blue;
   margin: auto;
-  // display: inline;
   @media #{$medium-up}{
     max-width: 690px;
     padding-top: 45px;   
@@ -186,14 +204,22 @@ ul.main_nav li a:hover{
 }
 
 .content_container .title{
-  line-height: 30px;
-  padding-top: 10px;
+  margin-top: 10px;
   letter-spacing: .5px;
   @media #{$small-only}{
     @include article_title($oswald_font, 22px, $darkgrey, 400);
+    line-height: 30px;
   }
-  @media #{$medium-only}{
+  @media #{$medium-up}{
     @include article_title($oswald_font, 18px, $darkgrey, 400);
+    line-height: 22px;
+    max-height: 44px;
+    overflow: hidden;
+  }
+  &:hover{
+    @media #{$medium-only}{
+      color: $red;
+    }
   }
 }
 
@@ -201,7 +227,7 @@ ul.main_nav li a:hover{
   @include article_title($lato_font, 14px, $grey, 400);
   // ::before &bull;
   display: inline-block;
-  padding-top: 5px;
+  margin-top: 5px;
 }
 
 .content_container p{
@@ -209,7 +235,11 @@ ul.main_nav li a:hover{
   text-align: left;
   line-height: 20px;
   letter-spacing: .5px;
-  padding-top: 10px;
+  margin-top: 10px;
+  @media #{$medium-up}{
+    max-height: 100px;
+    overflow: hidden;
+  }
 }
 
 footer{
@@ -220,26 +250,40 @@ footer{
   } 
 }
 
+footer .footer_container{
+  @media #{$medium-up}{
+    margin: auto;
+    width: 60px;
+  }
+}
+
 footer .facebook{
   @media #{$medium-up}{
     background-image: url('/assets/facebook_grey.svg');
     background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    margin: 10px auto;
-    padding-right: 100px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    float: left;
+    margin-top: 15px;
+  }
+  &:hover{
+    background-image: url('/assets/facebook_orange.svg');
   }
 }
 
-// footer .instaspam{
-//   @media #{$medium-up}{
-//     background-image: url('/assets/instagram_grey.svg');
-//     background-repeat: no-repeat;
-//     width: 20px;
-//     height: 20px;
-//     margin: auto;
-//     padding-left: 10px;
-//   }  
-// }
+footer .instaspam{
+  @media #{$medium-up}{
+    background-image: url('/assets/instagram_grey.svg');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-top: 15px;
+  }
+  &:hover{
+    background-image: url('/assets/instagram_orange.svg');
+  } 
+}
 
 

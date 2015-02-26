@@ -60,6 +60,11 @@ body {
 
 .logo_container {
   background-color: #FFF; }
+  @media only screen and (min-width:641px) {
+    .logo_container {
+      background-image: url('/assets/header_bg.svg');
+      background-repeat: no-repeat;
+      background-position: center; } }
 
 h1 {
   background-image: url('/assets/logo.svg');
@@ -71,10 +76,10 @@ h1 {
       height: 64px;
       background-size: contains;
       margin: auto; } }
-  @media only screen and (min-width:641px) and (max-width:960px) {
+  @media only screen and (min-width:641px) {
     h1 {
       height: 64px;
-      margin: auto; } }
+      background-position: center; } }
 
 @media only screen and (max-width:640px) {
   .plus {
@@ -91,7 +96,7 @@ h1 {
     margin: 10px 10px; }
     .plus:hover {
       background-color: #FC7E5A; } }
-@media only screen and (min-width:641px) and (max-width:960px) {
+@media only screen and (min-width:641px) {
   .plus {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     text-align: left;
@@ -116,7 +121,7 @@ ul.main_nav {
     ul.main_nav {
       font-family: "Oswald", Helvetica, Arial, sans-serif;
       text-align: left;
-      font-size: 16px;
+      font-size: 9px;
       color: #818285;
       font-weight: 400;
       width: 100%;
@@ -133,8 +138,20 @@ ul.main_nav li {
       box-sizing: border-box; } }
   @media only screen and (min-width:641px) {
     ul.main_nav li {
-      background-color: blue;
       margin-top: 15px; } }
+
+@media only screen and (min-width:641px) {
+  ul.authored li:before {
+    content: " ";
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background-color: #818285;
+    border-radius: 100%;
+    position: relative;
+    top: -4px;
+    margin-right: 8px;
+    margin-left: 8px; } }
 
 @media only screen and (min-width:641px) {
   ul.main_nav li:before {
@@ -179,7 +196,6 @@ ul.main_nav li a {
     color: #FC7E5A; } }
 
 .container {
-  background-color: blue;
   margin: auto; }
   @media only screen and (min-width:641px) {
     .container {
@@ -224,8 +240,7 @@ ul.main_nav li a {
       width: 100%; } }
 
 .content_container .title {
-  line-height: 30px;
-  padding-top: 10px;
+  margin-top: 10px;
   letter-spacing: .5px; }
   @media only screen and (max-width:640px) {
     .content_container .title {
@@ -233,14 +248,21 @@ ul.main_nav li a {
       text-align: left;
       font-size: 22px;
       color: #3A3A3C;
-      font-weight: 400; } }
-  @media only screen and (min-width:641px) and (max-width:960px) {
+      font-weight: 400;
+      line-height: 30px; } }
+  @media only screen and (min-width:641px) {
     .content_container .title {
       font-family: "Oswald", Helvetica, Arial, sans-serif;
       text-align: left;
       font-size: 18px;
       color: #3A3A3C;
-      font-weight: 400; } }
+      font-weight: 400;
+      line-height: 22px;
+      max-height: 44px;
+      overflow: hidden; } }
+  @media only screen and (min-width:641px) and (max-width:960px) {
+    .content_container .title:hover {
+      color: #BE3E2B; } }
 
 .content_container .info ul li {
   font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -249,7 +271,7 @@ ul.main_nav li a {
   color: #818285;
   font-weight: 400;
   display: inline-block;
-  padding-top: 5px; }
+  margin-top: 5px; }
 
 .content_container p {
   font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -260,7 +282,11 @@ ul.main_nav li a {
   text-align: left;
   line-height: 20px;
   letter-spacing: .5px;
-  padding-top: 10px; }
+  margin-top: 10px; }
+  @media only screen and (min-width:641px) {
+    .content_container p {
+      max-height: 100px;
+      overflow: hidden; } }
 
 @media only screen and (min-width:641px) {
   footer {
@@ -269,10 +295,29 @@ ul.main_nav li a {
     margin-top: 40px; } }
 
 @media only screen and (min-width:641px) {
+  footer .footer_container {
+    margin: auto;
+    width: 60px; } }
+
+@media only screen and (min-width:641px) {
   footer .facebook {
     background-image: url('/assets/facebook_grey.svg');
     background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    margin: 10px auto;
-    padding-right: 100px; } }
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    float: left;
+    margin-top: 15px; } }
+footer .facebook:hover {
+  background-image: url('/assets/facebook_orange.svg'); }
+
+@media only screen and (min-width:641px) {
+  footer .instaspam {
+    background-image: url('/assets/instagram_grey.svg');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-top: 15px; } }
+footer .instaspam:hover {
+  background-image: url('/assets/instagram_orange.svg'); }
