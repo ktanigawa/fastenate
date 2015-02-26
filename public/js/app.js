@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
   // alert("ready");
-  // getArticles();
+  getArticles("/api/my_boards.json");
   // when "my boards" is clicked
   $(".my_boards_btn").click(function(event){
     getArticles("/api/my_boards.json");
