@@ -65,14 +65,15 @@ function renderBox( article_data ){
   var time_ago = $("<li>",
     {
       "class" : "time_ago",
-      html : article_data.created
+      //unix Epoch
+      html : moment.unix(article_data.created).fromNow()
     });
   authored.append(time_ago);
 
   var views = $("<li>",
     {
       "class" : "views",
-      html : article_data.score
+      html : article_data.score +' views'
     });
   authored.append(views);
 
