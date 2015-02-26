@@ -99,3 +99,8 @@ function renderBox( article_data ){
   // now added data to your document
   return content_container;
 }
+
+// function normalizeArticles() {
+//   var article_sizes = $('.content_container');
+//   console.log(article_sizes.height());
+// }
