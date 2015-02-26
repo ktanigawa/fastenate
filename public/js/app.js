@@ -3,13 +3,25 @@
 
 $(document).ready(function(){
   // alert("ready");
-  getArticles();
+  // getArticles();
+  // when "my boards" is clicked
+  $(".my_boards_btn").click(function(event){
+    getArticles("/api/my_boards.json");
+  });
+  // when "random" is clicked
+  $(".random_btn").click(function(event){
+    getArticles("/api/random.json");
+  });
+  // when get the app is clicked
+  $(".get_app_btn").click(function(event){
+    getArticles("/api/get_the_app.json");
+  });
 });
 
-function getArticles() {
+function getArticles( url ) {
   $(".container").empty();
   // gets the data from the json file with the data argument
-  $.get( "api/get_the_app.json", function( data ) {
+  $.get( url, function( data ) {
     var articles = data.data.children;
     // it will loop through each variable articles
     $.each( articles, function(index, article){
