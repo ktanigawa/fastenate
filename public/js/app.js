@@ -1,20 +1,20 @@
-// .content_container .content_image{
-//   background-image: url()
-
 $(document).ready(function(){
   // alert("ready");
   getArticles("/api/my_boards.json");
   // when "my boards" is clicked
   $(".my_boards_btn").click(function(event){
-    getArticles("/api/my_boards.json");
+    // getArticles("/api/my_boards.json");
+    getArticles("http://www.reddit.com/r/pics.json");
   });
   // when "random" is clicked
   $(".random_btn").click(function(event){
-    getArticles("/api/random.json");
+    // getArticles("/api/random.json");
+    getArticles("http://www.reddit.com/r/pimpcats.json");
   });
   // when get the app is clicked
   $(".get_app_btn").click(function(event){
-    getArticles("/api/get_the_app.json");
+    // getArticles("/api/get_the_app.json");
+    getArticles("http://www.reddit.com/r/EarthPorn.json");
   });
 });
 
